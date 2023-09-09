@@ -10,6 +10,8 @@ class Appointment extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function pet(): BelongsTo
     {
         return $this->belongsTo(Pet::class);
