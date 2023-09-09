@@ -10,6 +10,8 @@ class Owner extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function pets(): HasMany
     {
         return $this->hasMany(Pet::class);

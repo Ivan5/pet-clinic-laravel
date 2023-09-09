@@ -11,6 +11,8 @@ class Pet extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function owner(): BelongsTo
     {
         return $this->belongsTo(Owner::class);
